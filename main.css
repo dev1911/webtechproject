@@ -1,0 +1,50 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width=90%;
+}
+
+header{
+	padding: 20px;
+	display: inline-block;
+}
+
+#headertext{
+	float: left;
+	font-size: 70;
+	font-family: sans-serif;
+	display: inline;
+}
+#headerlogo{
+	float: left;
+	display: inline;
+}
+
+nav{
+	position: relative;
+	vertical-align: middle;
+}
+
+nav li{
+	font-size: 23;
+	border-left:black 2px solid;
+	float: left;
+	vertical-align: middle;
+	/*list-style-type: none; */
+	display: inline-block;
+	width:100px;
+	height:50px;
+	background-color: #FF0000;
+	text-align: center;
+}
+
+li a:hover {
+	color:white;
+}
+
+footer{
+
+}
