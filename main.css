@@ -5,6 +5,7 @@
 
 body{
 	width=90%;
+	vertical-align:middle;
 }
 
 header{
@@ -14,9 +15,10 @@ header{
 
 #headertext{
 	float: left;
-	font-size: 70;
+	font-size: 50;
 	font-family: sans-serif;
 	display: inline;
+	padding-left:20px;
 }
 #headerlogo{
 	float: left;
@@ -29,16 +31,36 @@ nav{
 }
 
 nav li{
+	padding:10px;
+padding-bottom:0px;
 	font-size: 23;
 	border-left:black 2px solid;
 	float: left;
 	vertical-align: middle;
 	/*list-style-type: none; */
 	display: inline-block;
-	width:100px;
+	width:auto;
 	height:50px;
 	background-color: #FF0000;
 	text-align: center;
+	border-radius:10px;
+	margin:2px;
+}
+
+.custom_select select{
+   display: inline-block;
+    padding: 0px;
+    margin: 0;
+    font: inherit;
+	font-size:23;
+    background: #FF0000;
+    color:white;
+    border:0;
+	width:auto;
+}
+
+li:hover{
+box-shadow: 0 2px 5px 0 rgba(0,0,0,.4),0 6px 20px 0 rgba(0,0,0,0);
 }
 
 li a:hover {
