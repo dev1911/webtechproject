@@ -1,72 +1,109 @@
-*{
-	margin: 0;
-	padding: 0;
+html{
+	width: 80%;
+	margin: auto;
 }
 
 body{
-	width=90%;
-	vertical-align:middle;
+	width: auto;
+	vertical-align: middle;
 }
 
-header{
-	padding: 20px;
+header{	
+	/*justify-content: center;*/
+	height: 75px;
+	padding-top: 20px;
+	box-shadow: 0px 2px 1px grey;
 	display: inline-block;
 }
 
-#headertext{
-	float: left;
-	font-size: 50;
-	font-family: sans-serif;
-	display: inline;
-	padding-left:20px;
+#py_logo{
+	position: relative;
+	padding-left: 5px;
+	display: inline-block;
+	padding-right: 550px;
 }
-#headerlogo{
-	float: left;
-	display: inline;
+
+#header_text{
+	position: relative;
+	/*float: left;*/
+	padding: 20px;
+	margin-left: 200px;
+	text-shadow: 1px black;
+	color: grey;
+	font:serif;
+	font-size: 20;
+	display: inline-block;
+}
+
+
+#header_navi{
+	position: relative;
+	vertical-align: text-bottom;
+	float: right;
+	background-color: white;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#header_navi a{
+	padding: 5px;
+	font-size: 20;
+	border-right: 1px solid grey;
+	text-decoration: none;
+	color:grey;
+}
+
+#header_navi a:hover{
+	color: black;
+}
+
+#header_navi a:last-child{
+	border: none;
 }
 
 nav{
-	position: relative;
-	vertical-align: middle;
+	display: block;
+	overflow: hidden;
 }
 
-nav li{
-	padding:10px;
-padding-bottom:0px;
-	font-size: 23;
-	border-left:black 2px solid;
+#tut_navi{
+	overflow: hidden;
+	margin-top: 20px;
 	float: left;
-	vertical-align: middle;
-	/*list-style-type: none; */
+	padding-left: 5px;
 	display: inline-block;
-	width:auto;
-	height:50px;
-	background-color: #FF0000;
+}
+
+.drop_down_navi{
+
+}
+
+
+.tut_navi_buttons{
+	margin: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+.drop_down_navi_content{
+	display: none;
+	max-height: 0px;
+	transition: max-height 1s ease-out;
+}
+
+.drop_down_navi_content a{
+	float: none;
 	text-align: center;
-	border-radius:10px;
-	margin:2px;
+	padding: 10px 10px;
+	display: block;
+	text-decoration: none;
 }
+.drop_down_navi_content a:hover{
 
-.custom_select select{
-   display: inline-block;
-    padding: 0px;
-    margin: 0;
-    font: inherit;
-	font-size:23;
-    background: #FF0000;
-    color:white;
-    border:0;
-	width:auto;
 }
-
-li:hover{
-box-shadow: 0 2px 5px 0 rgba(0,0,0,.4),0 6px 20px 0 rgba(0,0,0,0);
-}
-
-li a:hover {
-	color:white;
-}
-
-footer{
-
+.tut_navi_buttons:hover .drop_down_navi_content{
+	display:block;
+	max-height: 200px;
+	transition: max-height 1s ease-in;
+	box-shadow: 0px 2px 1px grey;
 }
