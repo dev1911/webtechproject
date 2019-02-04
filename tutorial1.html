@@ -5,14 +5,24 @@
 </head>
 
 <body> 
-	<div id='nav'>
+	<!-- <div id='nav'>
 			<nav>
 				<ul>
 					<div><li><a href="tutorial1.html">Python</a></li></div>
 					<div><li><a href="https://www.youtube.com">DS</a></li></div>
 				</ul>
 			</nav>
+	</div> -->
+	<header >
+	<a href="index.html" id='py_logo'><img src="./a.png" height="75"></a>
+	<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
+	<div id='header_navi'>
+		<a href="./pythonfrontpage">Python</a>
+		<a href="./datastructuresfrontpage">Data Strucutres</a>
+		<a href="./algorithmsfrontpage">Algorithms</a>
+		<a href="./mathsfrontpage">Maths</a>
 	</div>
+</header>
 		<br><br><br>
 		<hr><hr>
 		<div id='heading'>
@@ -51,6 +61,14 @@
 						<input type="radio" name="anonymous" value="anonymous">Anonymous <br>
 						<!-- <textarea name="email" , id="comment_email" ,>E-mail</textarea> -->
 						Email -- <input type="email" name="comment_email"><br>
+						<br>
+						Topic -- 
+						<select name="Topic">
+							<option> Python </option>
+							<option> DS </option>
+							<option> Algorithms </option>
+							<option> Maths </option>
+						</select>
 						<br>
 						<textarea name="comments" , id="comment_comment">Comment</textarea>
 						<br>
