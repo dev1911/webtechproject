@@ -4,6 +4,7 @@ html{
 }
 
 body{
+	/*align-self: center;*/
 	width: auto;
 	vertical-align: middle;
 }
@@ -27,7 +28,7 @@ header{
 	position: relative;
 	/*float: left;*/
 	padding: 20px;
-	margin-left: 200px;
+	/*margin-left: 200px;*/
 	text-shadow: 1px black;
 	color: grey;
 	font:serif;
@@ -37,6 +38,7 @@ header{
 
 
 #header_navi{
+	clear: both;
 	position: relative;
 	vertical-align: text-bottom;
 	float: right;
@@ -75,11 +77,15 @@ nav{
 }
 
 .drop_down_navi{
-
+border: none;
+outline: none;
+background-color: inherit;
 }
 
 
 .tut_navi_buttons{
+	width: auto;
+	height: 20px;
 	margin: 10px;
 	position: relative;
 	display: inline-block;
@@ -87,8 +93,16 @@ nav{
 
 .drop_down_navi_content{
 	display: none;
-	max-height: 0px;
-	transition: max-height 1s ease-out;
+	height: 0px;
+	transition: height 1s ease-out;
+}
+
+.drop_down_navi i{
+	transition: all 0.5s ease;
+}
+
+.tut_navi_buttons:hover .drop_down_navi i{
+	transform: rotateZ(-180deg);
 }
 
 .drop_down_navi_content a{
@@ -101,9 +115,37 @@ nav{
 .drop_down_navi_content a:hover{
 
 }
+
+.tut_navi_buttons:hover{
+	height: auto;
+	transition: height 5s ease-in;
+}
+
 .tut_navi_buttons:hover .drop_down_navi_content{
 	display:block;
-	max-height: 200px;
-	transition: max-height 1s ease-in;
+	height: auto;
 	box-shadow: 0px 2px 1px grey;
+}
+
+#main_body{
+	display: inline-block;
+}
+
+#left_article{
+	padding: 10px;
+	float: left;
+	display: inline-block;
+}
+
+#right_article{
+	
+	padding: 10px;
+	display: inline-block;
+	float:right;
+}
+
+#mid_article{
+	padding: 10px;
+	float:none;
+	display: inline-block;
 }
