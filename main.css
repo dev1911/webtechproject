@@ -9,19 +9,35 @@ body{
 	vertical-align: middle;
 }
 
-header{	
+#noob{	
 	/*justify-content: center;*/
 	height: 75px;
 	padding-top: 20px;
 	box-shadow: 0px 2px 1px grey;
-	display: inline-block;
+	/*display: inline-block;*/
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: flex-start;*/
+	display: flex;
+	align-items: stretch;
 }
 
 #py_logo{
 	position: relative;
 	padding-left: 5px;
 	display: inline-block;
-	padding-right: 550px;
+	/*padding-right: 500px;*/
+}
+
+#header_para{
+	clear: both;
+	position: relative;
+	/*float: left;*/
+	display: inline-block;
+	flex: 1;
+	/*width: 500px;*/
+	flex-basis: 10px;
+	/*flex-shrink: 1;*/
 }
 
 #header_text{
@@ -38,10 +54,9 @@ header{
 
 
 #header_navi{
-	clear: both;
-	position: relative;
-	vertical-align: text-bottom;
-	float: right;
+	/*clear: both;*/
+	/*float: right;*/
+	/*vertical-align:top;*/
 	background-color: white;
 	overflow: hidden;
 	display: inline-block;
@@ -73,13 +88,15 @@ nav{
 	margin-top: 20px;
 	float: left;
 	padding-left: 5px;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
-.drop_down_navi{
-border: none;
-outline: none;
-background-color: inherit;
+.tut_navi_buttons .drop_down_navi{
+	overflow: hidden;
+	border: none;
+	outline: none;
+	color:black;
+	background-color: inherit;
 }
 
 
@@ -87,14 +104,20 @@ background-color: inherit;
 	width: auto;
 	height: 20px;
 	margin: 10px;
+	/*margin-bottom: 20px;*/
+	/*padding: 5px;*/
 	position: relative;
 	display: inline-block;
+
 }
 
 .drop_down_navi_content{
-	display: none;
-	height: 0px;
-	transition: height 1s ease-out;
+ 	display: none;
+ 	position: absolute;
+ 	background-color: #f9f9f9;
+ 	min-width: 160px;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 	z-index: 1;
 }
 
 .drop_down_navi i{
@@ -106,25 +129,32 @@ background-color: inherit;
 }
 
 .drop_down_navi_content a{
-	float: none;
+	/*clear: both;*/
+	/*float: left;*/
+	color: grey;
 	text-align: center;
 	padding: 10px 10px;
 	display: block;
 	text-decoration: none;
 }
 .drop_down_navi_content a:hover{
-
+	background-color: rgb(211,211,211);
+	color: black;
 }
 
 .tut_navi_buttons:hover{
+	/*background-color: rgb(211,211,211);*/
+	/*color: black;*/
 	height: auto;
 	transition: height 5s ease-in;
 }
 
 .tut_navi_buttons:hover .drop_down_navi_content{
+	/*margin-top: 5px;*/ /*uncomment this line to restrict*/
+	position: fixed;
 	display:block;
-	height: auto;
-	box-shadow: 0px 2px 1px grey;
+	/*height: auto;*/
+	/*box-shadow: 0px 2px 1px grey;*/
 }
 
 #main_body{
