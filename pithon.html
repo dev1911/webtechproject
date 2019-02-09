@@ -2,9 +2,12 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Home : Python</title>
+	<title>Pi using Python</title>
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 
 </head>
 
@@ -27,7 +30,7 @@
 		<div class="tut_navi_buttons">
 			<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
 			<div class="drop_down_navi_content">
-				<a href="tutorial1.html">Beginner</a>
+				<a href="#">Beginner</a>
 				<a href="#">Pre-intermediate</a>
 				<a href="#">Intermediate</a>
 			</div>
@@ -70,20 +73,18 @@
 </nav>
 <!-- <hr> -->
 <div id="main_body">
-	<div id="left_article" align="left"><article><p>Jump to:</p></article></div>
-	
-
-	<div id="mid_article"><article><h1>Python is very funny language. </h1><h4>First tutorial, yay!!</h4><p>We are glad you could make it. This website would have been a better place without you, just like this world. Anyways, let's get started. :)</br>As stated above, Python is very funny language. In fact, we are trying too bring POOP tutorials, Python- Object Oriented Principles. </br>Told ya, it's really funny. But you have to <em>control your languaez</em> . Do not type-in the psuedocode and expect it to run. </br> A quick note for those who are coming with their stacks full of C, C++ or Java or any other language like that. It's about semicolons (this kid --> ;) and curly braces (this couple --> { and }).</br></br> <b>"We don't do that here"</b><br><br>
-	&nbsp;&nbsp;&nbsp;&nbsp;imgFile = cv.imread('black_panther.jpg')<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.imshow('dst_rt', imgFile)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.waitKey(0)<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.destroyAllWindows()<br>
-<br/>If found using (without any specific need like Dictionary in Python any others), you will be given a "def _init_ () of shame class" and then will be thrown to Wakanada (yes, forever!!)</p></article></div>
-	
-
+	<div id="left_article" align="left"><article><p>This is left article. We will keep this for quick menu and index</p></article></div>
+	<div id="mid_article"><article>Highlight.js is working:<pre><code>e=float(input("Give e: "))
+pi=0.0
+n=int((4+e)/(2*e)-1)
+for i in range(1,n+1):
+    x=float(4/((2*i)-1))
+    if(i%2!=0):
+        pi=pi+x
+    else:
+        pi=pi-x
+print(pi)</code></pre></article></div>
 	<div id="right_article"><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
 </div>
-<!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
-<!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->
 </body>
 </html>	

@@ -107,15 +107,14 @@ nav{
 	margin: 10px;
 	/*margin-bottom: 20px;*/
 	/*padding: 5px;*/
-	position:relative;
+	position: relative;
 	display: inline-block;
 
 }
 
 .tut_navi_buttons .drop_down_navi_content{
  	display: none;
- 	right: 0;
- 	position: unset;
+ 	position: absolute;
  	background-color: #f9f9f9;
  	min-width: 160px;
  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -156,7 +155,7 @@ nav{
 
 .tut_navi_buttons:hover .drop_down_navi_content{
 	/*margin-top: 5px;*/ /*uncomment this line to restrict*/
-	position:fixed;
+	position: fixed;
 	display:block;
 	height:auto;
 	/*height: auto;*/
