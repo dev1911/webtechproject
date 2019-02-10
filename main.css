@@ -85,6 +85,9 @@ nav{
 }
 
 #tut_navi{
+	position: fixed;
+	top:0;
+	transition: top 0.3s;
 	overflow: hidden;
 	padding-top: 10px;
 	float: left;
@@ -170,11 +173,12 @@ nav{
 	/*justify-content: flex-start;*/
 	display: flex;
 	align-items: stretch;
-	height: 1000px;
+	height: auto;
 }
 
 #left_article{
 	padding: 10px;
+	height: inherit;
 	float: left;
 	/*min-width: 250px;*/
 	display: inline-block;
@@ -184,6 +188,7 @@ nav{
 
 #right_article{
 	padding: 10px;
+	height: auto;
 	display: inline-block;
 	float:right;
 	flex:4;
@@ -192,9 +197,19 @@ nav{
 
 #mid_article{
 	flex:10;
+	height: inherit;
 	padding: 10px;
 	float:none;
 	display: inline-block;
+}
+
+#mid_article img{
+	height: inherit;
+	widows: inherit;
+}
+.subhead{
+	/*font:;*/
+	/*float: right;	font-size: 300;*/
 }
 
 .sbar{
