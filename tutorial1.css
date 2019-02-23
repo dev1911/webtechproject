@@ -1,0 +1,199 @@
+
+html{
+	width: 80%;
+	margin: auto;
+}
+
+body{
+	width: auto;
+	vertical-align: middle;
+}
+
+#noob{	
+	/*justify-content: center;*/
+	height: 75px;
+	padding-top: 20px;
+	box-shadow: 0px 2px 1px rgba(128,128,128,0.7);
+	/*display: inline-block;*/
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: flex-start;*/
+	display: flex;
+	align-items: stretch;
+}
+
+#py_logo{
+	position: relative;
+	padding-left: 5px;
+	display: inline-block;
+	/*padding-right: 500px;*/
+}
+
+#header_para{
+	clear: both;
+	position: relative;
+	/*float: left;*/
+	display: inline-block;
+	flex: 1;
+	/*width: 500px;*/
+	flex-basis: 10px;
+	/*flex-shrink: 1;*/
+}
+
+#header_text{
+	position: relative;
+	/*float: left;*/
+	padding: 20px;
+	/*margin-left: 200px;*/
+	text-shadow: 1px black;
+	color: grey;
+	font:serif;
+	font-size: 20;
+	display: inline-block;
+}
+
+
+#header_navi{
+	/*clear: both;*/
+	/*float: right;*/
+	/*vertical-align:top;*/
+	background-color: white;
+	overflow: hidden;
+	display: inline-block;
+}
+
+#header_navi a{
+	padding: 5px;
+	font-size: 20;
+	border-right: 1px solid grey;
+	text-decoration: none;
+	color:grey;
+}
+
+#header_navi a:hover{
+	color: black;
+}
+
+#header_navi a:last-child{
+	border: none;
+}
+
+nav{
+	display: block;
+	overflow: hidden;
+	box-shadow: 0px 2px 1px rgba(128,128,128,0.7);
+}
+
+#tut_navi{
+	overflow: hidden;
+	padding-top: 10px;
+	float: left;
+	padding-left: 5px;
+	/*display: inline-block;*/
+}
+
+.tut_navi_buttons .drop_down_navi{
+	overflow: hidden;
+	border: none;
+	outline: none;
+	color:black;
+	background-color: inherit;
+}
+
+
+.tut_navi_buttons{
+	width: auto;
+	height: 20px;
+	margin: 10px;
+	/*margin-bottom: 20px;*/
+	/*padding: 5px;*/
+	position:relative;
+	display: inline-block;
+
+}
+
+.tut_navi_buttons .drop_down_navi_content{
+ 	display: none;
+ 	right: 0;
+ 	position: unset;
+ 	background-color: #f9f9f9;
+ 	min-width: 160px;
+ 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+ 	z-index: 1;
+ 	height: 0px;
+ 	transition:height 1s ease;
+}
+
+.drop_down_navi i{
+	transition: all 0.5s ease;
+}
+
+.tut_navi_buttons:hover .drop_down_navi i{
+	transform: rotateZ(-180deg);
+}
+
+.drop_down_navi_content a{
+	/*clear: both;*/
+	/*float: left;*/
+	color: grey;
+	text-align: center;
+	padding: 10px 10px;
+	display: block;
+	text-decoration: none;
+}
+.drop_down_navi_content a:hover{
+	background-color: rgb(211,211,211);
+	color: black;
+}
+
+.tut_navi_buttons:hover{
+	/*height: 500px;*/
+	/*background-color: rgb(211,211,211);*/
+	/*color: black;*/
+	/*height:0;*/
+	/*transition: height 5s ease-in;*/
+	color : blue;
+}
+
+.tut_navi_buttons:hover .drop_down_navi_content{
+	margin-top: 5px; /*uncomment this line to restrict*/
+	position:fixed;
+	display:block;
+	height:auto;
+	/*height: auto;*/
+	/*box-shadow: 0px 2px 1px grey;*/
+}
+
+#main_body{
+	padding-top:20px; 
+	flex-direction: row;
+	flex-wrap: wrap;
+	/*justify-content: flex-start;*/
+	display: flex;
+	align-items: stretch;
+	height: 1000px;
+}
+
+#left_article{
+	padding: 10px;
+	float: left;
+	/*min-width: 250px;*/
+	display: inline-block;
+	flex:4;
+	background-color: rgb(211,211,211);
+}
+
+#right_article{
+	padding: 10px;
+	display: inline-block;
+	float:right;
+	flex:4;
+	background-color: rgb(211,211,211); 
+}
+
+#mid_article{
+	flex:10;
+	padding: 10px;
+	float:none;
+	display: inline-block;
+}

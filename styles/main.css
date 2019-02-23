@@ -1,5 +1,5 @@
 html{
-	width: 80%;
+	width: 95%;
 	margin: auto;
 }
 
@@ -114,7 +114,7 @@ nav{
 
 .tut_navi_buttons .drop_down_navi_content{
  	display: none;
- 	position: absolute;
+ 	position: relative;
  	background-color: #f9f9f9;
  	min-width: 160px;
  	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -177,7 +177,7 @@ nav{
 	float: left;
 	/*min-width: 250px;*/
 	display: inline-block;
-	flex:4;
+	flex:3;
 	background-color: rgb(211,211,211);
 }
 
@@ -185,7 +185,7 @@ nav{
 	padding: 10px;
 	display: inline-block;
 	float:right;
-	flex:4;
+	flex:3;
 	background-color: rgb(211,211,211); 
 }
 
@@ -214,4 +214,16 @@ nav{
 
 .sbutton:hover{
 	background-color:grey;
+}
+
+#facebook{
+	background: url("./social-icons.jpg") 0 0;
+	left : 0px;
+	right : 50px; 
+}
+
+#twitter{
+	background:  url("./social-icons.jpg") -50px 0;
+	left : 50px;
+	right : 100px;
 }
