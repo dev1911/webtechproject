@@ -1,5 +1,5 @@
 html{
-	width: 80%;
+	width: 95%;
 	margin: auto;
 }
 
@@ -85,9 +85,6 @@ nav{
 }
 
 #tut_navi{
-	position: fixed;
-	top:0;
-	transition: top 0.3s;
 	overflow: hidden;
 	padding-top: 10px;
 	float: left;
@@ -110,14 +107,13 @@ nav{
 	margin: 10px;
 	/*margin-bottom: 20px;*/
 	/*padding: 5px;*/
-	position:relative;
+	position: relative;
 	display: inline-block;
 
 }
 
 .tut_navi_buttons .drop_down_navi_content{
  	display: none;
- 	right: 0;
  	position: relative;
  	background-color: #f9f9f9;
  	min-width: 160px;
@@ -159,7 +155,7 @@ nav{
 
 .tut_navi_buttons:hover .drop_down_navi_content{
 	/*margin-top: 5px;*/ /*uncomment this line to restrict*/
-	position:fixed;
+	position: fixed;
 	display:block;
 	height:auto;
 	/*height: auto;*/
@@ -173,43 +169,31 @@ nav{
 	/*justify-content: flex-start;*/
 	display: flex;
 	align-items: stretch;
-	height: auto;
+	height: 1000px;
 }
 
 #left_article{
 	padding: 10px;
-	height: inherit;
 	float: left;
 	/*min-width: 250px;*/
 	display: inline-block;
-	flex:4;
+	flex:3;
 	background-color: rgb(211,211,211);
 }
 
 #right_article{
 	padding: 10px;
-	height: auto;
 	display: inline-block;
 	float:right;
-	flex:4;
+	flex:3;
 	background-color: rgb(211,211,211); 
 }
 
 #mid_article{
 	flex:10;
-	height: inherit;
 	padding: 10px;
 	float:none;
 	display: inline-block;
-}
-
-#mid_article img{
-	height: inherit;
-	widows: inherit;
-}
-.subhead{
-	/*font:;*/
-	/*float: right;	font-size: 300;*/
 }
 
 .sbar{
@@ -231,8 +215,20 @@ nav{
 .sbutton:hover{
 	background-color:grey;
 }
+
+#facebook{
+	background: url("./social-icons.jpg") 0 0;
+	left : 0px;
+	right : 50px; 
+}
+
+#twitter{
+	background:  url("./social-icons.jpg") -50px 0;
+	left : 50px;
+	right : 100px;
+}
+
 .slider{
-	width: 80%;
-	opacity: 0.7;
-	background-color: red;
+	width: 100%;
+	background-color: blue;
 }
