@@ -3,9 +3,36 @@
 	<title>Tutorial 1</title>
 	<link rel='stylesheet' , type="text/css" , href="styles/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/tutorial1.js"></script>
 </head>
 
 <body> 
+	<script type="text/javascript">
+		function hello() {
+			console.log('hello');
+			//use tab key to prank someone
+var strs = [
+      "Sup kiddo",
+      "I'm cool!"
+    ];
+
+var t = document.getElementById('comment_comment'),
+    str = strs[0],
+    len = str.length,
+    on = false,
+    l=0;
+    t.addEventListener('keydown',apple);
+function apple(){
+  l++;
+  
+  
+  t.value = str.substr(0,l);
+  // l+=1;
+  // e.preventDefault();
+}
+
+		}
+	</script>
 
 	<header>
 		<div id="noob">
@@ -96,30 +123,28 @@
 
 			<br>
 			<hr><hr>
-			<div id='comment_section'>
+			<div  class="comment_section">
 				<h3>COMMENTS</h3>
 
-				<div id="comment_outer">
+				<div class="comment_outer">
 
-					<form >
+					<form id="comment_form" name="comment_form" onsubmit="return validate_input()">
 						<div>
-							<!-- <textarea name="name" , id="comment_name">Name</textarea> -->
-							Name --<input type="text" name="comment_name">
-							<br>
 							<input type="radio" name="anonymous" value="public">Public <t>
 							<input type="radio" name="anonymous" value="anonymous">Anonymous <br>
-							<!-- <textarea name="email" , id="comment_email" ,>E-mail</textarea> -->
+							<br>
+							Name --<input type="text" name="comment_name"><br>
 							Email -- <input type="email" name="comment_email"><br>
 							<br>
-							Topic -- 
+							<!-- Topic -- 
 							<select name="Topic">
 								<option> Python </option>
 								<option> DS </option>
 								<option> Algorithms </option>
 								<option> Maths </option>
-							</select>
+							</select> -->
 							<br>
-							<textarea name="comments" , id="comment_comment">Comment</textarea>
+							<textarea name="comments" id="comment_comment" onclick="hello()" form="comment_form">Comment</textarea>
 							<br>
 							<input type="submit" value="Submit">
 						</div>
@@ -143,5 +168,7 @@
 
 
 	</div>
+
+
 </body>
 </html>
