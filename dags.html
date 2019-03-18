@@ -1,3 +1,70 @@
-<html>
-<head></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>Bar chart with D3.js</title>
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/da.css">
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- <script src="js/da.js"></script> -->
+</head>
+<body>
+  <div id='layout'>
+    <h2>Bar chart example</h2>
+    <div class='container'>
+      <svg class="chart" height="500" width="1000"/>
+    </div>
+  </div> 
+<p>Why this is not working?? </p>
+</body>
+  <script>
+    var data = [1,2,3,4,5];
+    var svg = d3.select("svg");
+    var margin=100,
+        width=svg.attr("width")-margin,
+        height=svg.attr("height")-margin;
+    var Xscale = d3.scaleBand()
+                  .domain([0,data.length])
+                  .range([0, width])
+                  .padding(0.2);
+    var Yscale=d3.scaleLinear()
+                  .domain([0,d3.max(data)])
+                 .range([height,0]);  
+    var g=svg.append("g")
+              .attr("transform","translate("+100+","+100+")");  
+         g.append("g")
+         .attr("transform", "translate(0," + height + ")")
+         .call(d3.axisBottom(Xscale).tickFormat(function(d){
+                    return d;
+                }).ticks(10))
+         ;
+         // .append("text")
+         // .attr("x", 6)
+         // .attr("text-anchor", "end")
+         // .text("index");
+
+        g.append("g")
+         .call(d3.axisLeft(Yscale).tickFormat(function(d){
+             return d;
+         }).ticks(10))
+         .append("text")
+         .attr("y", 6)
+         .attr("dy", "0.71em")
+         .attr("text-anchor", "end")
+         .text("value");
+
+
+        g.selectAll(".bar")
+         .data(data)
+         .enter().append("rect")
+         .attr("class", "bar")
+         .attr("x", function(d,i) { return i*100+245 ; })
+         .attr("y", function(d,i) { return 0; })
+         .attr("width", Xscale.bandwidth())
+         .attr("height", function(d,i) { return height-100*(i); });
+
+ </script>
 </html>

@@ -2,10 +2,11 @@ html{
 	width: 95%;
 	margin: auto;
 }
-
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
 body{
 	/*align-self: center;*/
 	width: auto;
+	font-family: 'Open Sans',serif;
 	vertical-align: middle;
 }
 
@@ -170,6 +171,8 @@ nav{
 	display: flex;
 	align-items: stretch;
 	height: 1000px;
+	font-size: 18;
+	/*font-family: @import url('https://fonts.googleapis.com/css?family=Open+Sans');*/
 }
 
 #left_article{
