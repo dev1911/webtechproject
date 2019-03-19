@@ -8,6 +8,13 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="styles/da.css">
   <script src="https://d3js.org/d3.v5.min.js"></script>
+<!--   <script src="https://d3js.org/d3-color.v1.min.js"></script>
+  <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+  <script src="https://d3js.org/d3-ease.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+  <script src="https://d3js.org/d3-selection.v1.min.js"></script>
+  <script src="https://d3js.org/d3-timer.v1.min.js"></script>
+  <script src="https://d3js.org/d3-transition.v1.min.js"></script> -->
 
   <!-- <script src="js/da.js"></script> -->
 </head>
@@ -21,32 +28,11 @@
 <p>Why this is not working?? </p>
 </body>
   <script>
-window.onload=begin;
-
-function begin(){
-  var data = [2,10,3,4,3,6,7,8,9,1];
-  var data2=[23,10];
-  draw(data);
-
-    // draw(data2);
-}
- var svg = d3.select("svg");
- 
-
- function apple(){
-  for(var i=1;i<=data.length;i++){
-    
-    data[i-1]=i*10;
-    // console.log(data[i-1])
-    setTimeout(draw(i),1000);
-  }
- }
-
-
-function draw(data){
+var data = [2,10,3,4,5,6,7,8,9,1];
+var svg = d3.select("svg");
     console.log();
     svg.selectAll("*").remove();
-    var margin=100,
+    var margin=50,
         width=svg.attr("width")-margin,
         height=svg.attr("height")-margin;
     var Xscale = d3.scaleBand()
@@ -57,17 +43,13 @@ function draw(data){
                   .domain([0,d3.max(data)])
                  .range([height,0]);  
     var g=svg.append("g")
-              .attr("transform","translate("+100+","+100+")");  
+              .attr("transform","translate("+margin+","+margin+")");  
          g.append("g")
          .attr("transform", "translate(0," + height + ")")
          .call(d3.axisBottom(Xscale).tickFormat(function(d){
                     return d;
-                }).ticks(10))
+                }).ticks(data.length))
          ;
-         // .append("text")
-         // .attr("x", 6)
-         // .attr("text-anchor", "end")
-         // .text("index");
 
         g.append("g")
          .call(d3.axisLeft(Yscale).tickFormat(function(d){
@@ -88,9 +70,33 @@ function draw(data){
          .attr("y", function(d,i) { return Yscale(d); })
          .attr("width", Xscale.bandwidth())
          .attr("height", function(d,i) { return height-Yscale(d); });
-         // svg.selectAll("*").remove();
-       
-}
+         data2=[10,9,8,7,6,5,4,3,2,1];
+         data3=[1,2,3,4,5,6,7,8,9,10];
+         // setTimeout(function(){return 1;},1000);
+        for(var i=0;i<data.length;i++){
+          var min=i;
+          for(var j=i;j<data.length;j++){
+            if(data[j]<data[i])
+              min=j;
+          }
+          var temp=data[i];
+          data[i]=data[min];
+          data[min]=temp;
+          update(data);
+        }
 
+function update(data2){
+  svg.selectAll("bars").remove();
+  Xscale.domain(data2.map((e,i) => i+1)).range([0, width])
+                  .padding(0.2);
+  Yscale.domain([0,d3.max(data2)]);
+  var bars = svg.selectAll(".bar")
+            .remove().exit()
+            .data(data2);
+      bars.enter().append("rect").attr("class","bar").transition().duration(1000).attr("x", function(d,i) { return margin+Xscale(i+1); }).attr("y", function(d,i) { return margin+Yscale(d); }).attr("width", Xscale.bandwidth())
+         .attr("height", function(d,i) { return height-Yscale(d); });
+         
+}
  </script>
+
 </html>
