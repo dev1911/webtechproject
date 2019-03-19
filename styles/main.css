@@ -2,11 +2,11 @@ html{
 	width: 95%;
 	margin: auto;
 }
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
 body{
 	/*align-self: center;*/
 	width: auto;
-	font-family: 'Open Sans',serif;
+	font-family: 'Open Sans', sans-serif;
 	vertical-align: middle;
 }
 

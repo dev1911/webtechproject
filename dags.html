@@ -21,13 +21,36 @@
 <p>Why this is not working?? </p>
 </body>
   <script>
-    var data = [1,2,3,4,5];
-    var svg = d3.select("svg");
+window.onload=begin;
+
+function begin(){
+  var data = [2,10,3,4,3,6,7,8,9,1];
+  var data2=[23,10];
+  draw(data);
+
+    // draw(data2);
+}
+ var svg = d3.select("svg");
+ 
+
+ function apple(){
+  for(var i=1;i<=data.length;i++){
+    
+    data[i-1]=i*10;
+    // console.log(data[i-1])
+    setTimeout(draw(i),1000);
+  }
+ }
+
+
+function draw(data){
+    console.log();
+    svg.selectAll("*").remove();
     var margin=100,
         width=svg.attr("width")-margin,
         height=svg.attr("height")-margin;
     var Xscale = d3.scaleBand()
-                  .domain([0,data.length])
+                  .domain(data.map((e,i) => i+1))
                   .range([0, width])
                   .padding(0.2);
     var Yscale=d3.scaleLinear()
@@ -61,10 +84,13 @@
          .data(data)
          .enter().append("rect")
          .attr("class", "bar")
-         .attr("x", function(d,i) { return i*100+245 ; })
-         .attr("y", function(d,i) { return 0; })
+         .attr("x", function(d,i) { return Xscale(i+1); })
+         .attr("y", function(d,i) { return Yscale(d); })
          .attr("width", Xscale.bandwidth())
-         .attr("height", function(d,i) { return height-100*(i); });
+         .attr("height", function(d,i) { return height-Yscale(d); });
+         // svg.selectAll("*").remove();
+       
+}
 
  </script>
 </html>
