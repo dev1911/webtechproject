@@ -165,6 +165,7 @@ nav{
 
 #main_body{
 	padding-top:20px; 
+	/*margin-bottom: 30px;*/
 	flex-direction: row;
 	flex-wrap: wrap;
 	/*justify-content: flex-start;*/
@@ -176,6 +177,8 @@ nav{
 }
 
 #left_article{
+	padding-top:20px; 
+	margin-bottom: 30px;
 	padding: 10px;
 	float: left;
 	/*min-width: 250px;*/
@@ -184,7 +187,9 @@ nav{
 	background-color: rgb(211,211,211);
 }
 
-#right_article{
+#right_article{ 
+	padding-top:20px; 
+	margin-bottom: 30px;
 	padding: 10px;
 	display: inline-block;
 	float:right;
@@ -193,6 +198,9 @@ nav{
 }
 
 #mid_article{
+	padding-bottom:50px;
+	padding-top:20px; 
+	margin-bottom: 50px;
 	flex:10;
 	padding: 10px;
 	float:none;
@@ -230,3 +238,4 @@ nav{
 	left : 50px;
 	right : 100px;
 }
+

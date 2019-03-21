@@ -12,7 +12,7 @@ div.container {
   width: 1000px;
   height: 600px;
   margin: auto;
-  background-color: #2F4A6D;
+  background-color: rgb(211,211,211);
 }
 
 svg {
@@ -23,10 +23,12 @@ svg {
 .bar {
   fill: #80cbc4;
 }
-
+.orange_bar {
+  fill: red;
+}
 text {
   font-size: 12px;
-  fill: #fff;
+  fill: #000;
 }
 
 path {
