@@ -239,3 +239,12 @@ nav{
 	right : 100px;
 }
 
+#comment{
+	width: 100%;
+      height: relative;
+      padding: 10px;
+      background-color: #d0e2bc;
+      font: 1.4em/1.6em cursive;
+      font-size: 10;
+      color: #095484;
+}
