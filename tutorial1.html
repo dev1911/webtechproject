@@ -4,35 +4,11 @@
 	<link rel='stylesheet' , type="text/css" , href="styles/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="js/tutorial1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/tutorial1jq.js"></script>
 </head>
 
 <body> 
-	<script type="text/javascript">
-		function hello() {
-			console.log('hello');
-			//use tab key to prank someone
-var strs = [
-      "Sup kiddo",
-      "I'm cool!"
-    ];
-
-var t = document.getElementById('comment_comment'),
-    str = strs[0],
-    len = str.length,
-    on = false,
-    l=0;
-    t.addEventListener('keydown',apple);
-function apple(){
-  l++;
-  
-  
-  t.value = str.substr(0,l);
-  // l+=1;
-  // e.preventDefault();
-}
-
-		}
-	</script>
 
 	<header>
 		<div id="noob">
@@ -133,18 +109,13 @@ function apple(){
 							<input type="radio" name="anonymous" value="public">Public <t>
 							<input type="radio" name="anonymous" value="anonymous">Anonymous <br>
 							<br>
-							Name --<input type="text" name="comment_name"><br>
-							Email -- <input type="email" name="comment_email"><br>
+							<p>Name</p>   <input type="text" name="comment_name" id="name_input" ><br>
+							<p>Email</p>    <input type="email" name="comment_email" id="email_input">
 							<br>
-							<!-- Topic -- 
-							<select name="Topic">
-								<option> Python </option>
-								<option> DS </option>
-								<option> Algorithms </option>
-								<option> Maths </option>
-							</select> -->
 							<br>
-							<textarea name="comments" id="comment_comment" onclick="hello()" form="comment_form">Comment</textarea>
+
+							<br>
+							<textarea name="comments" id="comment_comment"  form="comment_form">Comment</textarea>
 							<br>
 							<input type="submit" value="Submit">
 						</div>
@@ -152,15 +123,12 @@ function apple(){
 					<br>
 
 				</div>
-				<!-- <img src="social-icons.jpg" width=50px height=50px > -->
-				<div id="facebook" > <a href="https://facebook.com"> </a></div>
-				<div id="twitter" > <a href="https://twitter.com"> </a> </div>
-				<div id="youtube" > <a href="https://youtube.com"> </a> </div>
 
-				<ul>
-					<li id="facebook" > <a href="https://facebook.com"> </a></li>
-					<li id="twitter" > <a href="https://twitter.com"> </a></li>
 
+				<div id="comments">
+					<ul>
+					</ul>
+				</div>
 
 			</div>
 		</div>
