@@ -17,12 +17,12 @@ $(document).ready(function(){
 	})
 
 	$(function(){
-		let list_of_comments , new_comment_name , new_comment_email , comment_content;
-		list_of_comments = $("ul");
+		let list_of_comments , new_comment_name , new_comment_email , comment_content ,time_stamp;
+		list_of_comments = $("#comment_list");
 		new_comment_name = $("#name_input");
 		new_comment_email = $("#email_input");
 		comment_content = $("#comment_comment");
-
+		time_stamp = new Date();
 		$("form").on("submit" , function(e){
 			e.preventDefault();
 			let name_text = $("#name_input").val();
@@ -30,10 +30,10 @@ $(document).ready(function(){
 			let comment_text = $("#comment_comment").val();
 
 			if(name_text == "" && email_text == ""){
-				list_of_comments.append('<li id="comment"><b>Anonymous</b><br>'+comment_text+'<hr></li>');
+				list_of_comments.append('<li id="comment" class="container"><blockquote class="blockquote">'+comment_text+'<footer>Anonymous</footer><hr></li>');
 			}
 			else{
-			list_of_comments.append('<li id="comment">'+name_text+'<br>'+email_text+'<br>'+comment_text+'<hr></li>');
+			list_of_comments.append('<li id="comment" class="container"><blockquote class="blockquote">'+comment_text+'<br><footer>'+name_text+'<br>'+email_text+'<br>'+time_stamp+'</footer></blockquote><hr></li>');
 		}
 		});
 	})
