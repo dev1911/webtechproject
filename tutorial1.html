@@ -1,5 +1,10 @@
 <html>
 <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
 	<title>Tutorial 1</title>
 	<link rel='stylesheet' , type="text/css" , href="styles/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +29,7 @@
 		</div>
 	</header>
 
-	<nav>
+	<nav class="navbar navbar-default">
 		<div id='tut_navi'>
 			<div class="tut_navi_buttons">
 				<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
@@ -72,71 +77,84 @@
 	</nav>
 
 
-	<div id="main_body">
-		<div id="left_article" align="left"><article><p></p></article></div>
-		<div id="mid_article">
-			<br><br><br>
-			
-			<div id='heading'>
-				<table align="center">
-					<tr>
-						<td><img src="images/python.jpeg"  hspace="30" height="50" width="50"></td>
-						<td><center><h2>PYTHON TUTORIAL</h2></center></td>
-						<td><img src="images/python.jpeg" hspace="30" height="50" width="50"></td>
-					</tr>
-				</table>
+	<div id="main_body" class="container">
+		<div class="row">
+			<div id="left_article" align="left" class="col-lg-3">
+
+				<article><p>This is the left article</p></article>
 			</div>
-
-
-			<div id='content'>
-				<center><h3>Python tutorial 1</h3>
-				<p>Welcome to python tutorials. This is the first in the series of a literal thousand tutorials.</p>
-				<p>We hope you are as excited about this journey as we are</p>
-				<p> Python is a interpreted languez. It means you have to control it.</p>
-				<p> You can do almost anything with Python. Literally, anything. This post was made by a python script. Got you there, didn't I?. You would've imagined a 2nd year student wasting his time writing this content for his equally wastefull web technology project. That is not the case however. </p>
-				<p> Curious ? Follow the tutorials to learn how I managed to write the above python script.</p> 
-			</div>
-
-			<br>
-			<hr><hr>
-			<div  class="comment_section">
-				<h3>COMMENTS</h3>
-
-				<div class="comment_outer">
-
-					<form id="comment_form" name="comment_form" onsubmit="return validate_input()">
-						<div>
-							<input type="radio" name="anonymous" value="public">Public <t>
-							<input type="radio" name="anonymous" value="anonymous">Anonymous <br>
-							<br>
-							<p>Name</p>   <input type="text" name="comment_name" id="name_input" ><br>
-							<p>Email</p>    <input type="email" name="comment_email" id="email_input">
-							<br>
-							<br>
-
-							<br>
-							<textarea name="comments" id="comment_comment"  form="comment_form">Comment</textarea>
-							<br>
-							<input type="submit" value="Submit">
-						</div>
-					</form>
-					<br>
-
+			<div id="mid_article" class="col-lg-6">
+				<br><br><br>
+				
+				<div id='heading'>
+					<table align="center">
+						<tr>
+							<td><img src="images/python.jpeg"  hspace="30" height="50" width="50"></td>
+							<td><center><h2>PYTHON TUTORIAL</h2></center></td>
+							<td><img src="images/python.jpeg" hspace="30" height="50" width="50"></td>
+						</tr>
+					</table>
 				</div>
 
 
-				<div id="comments">
-					<ul>
-					</ul>
+				<div id='content'>
+					<center><h3>Python tutorial 1</h3>
+					<p>Welcome to python tutorials. This is the first in the series of a literal thousand tutorials.</p>
+					<p>We hope you are as excited about this journey as we are</p>
+					<p> Python is a interpreted languez. It means you have to control it.</p>
+					<p> You can do almost anything with Python. Literally, anything. This post was made by a python script. Got you there, didn't I?. You would've imagined a 2nd year student wasting his time writing this content for his equally wastefull web technology project. That is not the case however. </p>
+					<p> Curious ? Follow the tutorials to learn how I managed to write the above python script.</p> 
 				</div>
 
+				<br>
+				<hr><hr>
+				<div  class="comment_section">
+					<h3>COMMENTS</h3>
+
+					<div class="comment_outer">
+
+						<form id="comment_form" name="comment_form" onsubmit="return validate_input()">
+							<div>
+								<input type="radio" name="anonymous" value="public">Public <t>
+								<input type="radio" name="anonymous" value="anonymous">Anonymous <br>
+								<br>
+								<p>Name</p>   <input type="text" name="comment_name" id="name_input" ><br>
+								<p>Email</p>    <input type="email" name="comment_email" id="email_input">
+								<br>
+								<br>
+
+								<br>
+								<textarea name="comments" id="comment_comment"  form="comment_form">Comment</textarea>
+								<br>
+								<input type="submit" value="Submit">
+							</div>
+						</form>
+						<br>
+
+					</div>
+
+
+					<div id="comments">
+						<ul id="comment_list" style="list-style-type: none">
+						</ul>
+					</div>
+
+				</div>
+				<div class="container" >
+				<ul class="pagination" id="page_no">
+					<li class="active"><a href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+				</ul>
+				</div>
+			</div>
+			<div id="right_article" align="right" class="col-lg-3"><article><p>This is the right article</p></article>
 			</div>
 		</div>
-		<div id="right_article" align="right"><article><p>This is the right article</p></article></div>
-
 
 	</div>
-
+	
 
 </body>
 </html>
