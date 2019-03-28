@@ -17,11 +17,13 @@ $(document).ready(function(){
 	})
 
 	$(function(){
-		let list_of_comments , new_comment_name , new_comment_email , comment_content ,time_stamp;
+		let list_of_comments , new_comment_name , new_comment_email , comment_content ,time_stamp, success;
 		list_of_comments = $("#comment_list");
 		new_comment_name = $("#name_input");
 		new_comment_email = $("#email_input");
 		comment_content = $("#comment_comment");
+		
+		let success1 = document.getElementById("successfull_comment");
 		time_stamp = new Date();
 		$("form").on("submit" , function(e){
 			e.preventDefault();
@@ -31,9 +33,15 @@ $(document).ready(function(){
 
 			if(name_text == "" && email_text == ""){
 				list_of_comments.append('<li id="comment" class="container"><blockquote class="blockquote">'+comment_text+'<footer>Anonymous</footer><hr></li>');
+				success1.innerHTML="Comment succesfull";
+			
+			
 			}
 			else{
 			list_of_comments.append('<li id="comment" class="container"><blockquote class="blockquote">'+comment_text+'<br><footer>'+name_text+'<br>'+email_text+'<br>'+time_stamp+'</footer></blockquote><hr></li>');
+			success1.innerHTML="<div class= 'alert alert-success'>Comment succesfull</div>";
+			
+			
 		}
 		});
 	})

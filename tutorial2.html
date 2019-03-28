@@ -1,0 +1,187 @@
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+
+	<title>Tutorial 2</title>
+	<link rel='stylesheet' , type="text/css" , href="styles/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="js/tutorial1.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/tutorial1jq.js"></script>
+</head>
+
+<body> 
+
+	<header>
+		<div id="noob">
+		<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
+		<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
+		<p id="header_para"></p>
+		<div id='header_navi'>
+			<a href="./pythonfrontpage">Python</a>
+			<a href="./datastructuresfrontpage">Data Strucutres</a>
+			<a href="./algorithmsfrontpage.html">Algorithms</a>
+			<a href="./mathsfrontpage.html">Maths</a>
+		</div>
+		</div>
+	</header>
+
+	<nav class="navbar navbar-default">
+		<div id='tut_navi'>
+			<div class="tut_navi_buttons">
+				<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
+				<div class="drop_down_navi_content">
+					<a href="tutorial1.html">Beginner</a>
+					<a href="#">Pre-intermediate</a>
+					<a href="#">Intermediate</a>
+				</div>
+			</div>
+			<div class="tut_navi_buttons">
+				<button class="drop_down_navi">Object Collections <i class="fa fa-angle-down"></i></button>
+				<div class="drop_down_navi_content">
+					<a href="#">Lists</a>
+					<a href="#">Tuples</a>
+					<a href="#">Dictionaries</a>
+				</div>
+			</div>
+			<div class="tut_navi_buttons">
+				<button class="drop_down_navi">Data Analysis <i class="fa fa-angle-down"></i></button>
+				<div class="drop_down_navi_content">
+					<a href="#">Getting started</a>
+					<a href="#">Data Frames</a>
+					<a href="#">Infinite data</a>
+				</div>
+			</div>
+			<div class="tut_navi_buttons">
+				<button class="drop_down_navi">Python Libraries <i class="fa fa-angle-down"></i></button>
+				<div class="drop_down_navi_content">
+					<a href="#">NumPy</a>
+					<a href="#">SciPy</a>
+					<a href="#">Pandas</a>
+					<a href="#">MatplotLib</a>
+					<a href="#">OpenCV</a>
+				</div>
+			</div>
+			<div class="tut_navi_buttons">
+				<button class="drop_down_navi">Featured Articles <i class="fa fa-angle-down"></i></button>
+				<div class="drop_down_navi_content">
+					<a href="pithon.html">Pi using Python</a>
+					<a href="#">Python every day</a>
+					<a href="#">Coffee with Python</a>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<div>
+		<ul class="breadcrumb">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Tutorial 2</a></li>
+		</ul>
+	</div>
+
+	<div id="main_body" class="container">
+		<div class="row">
+			<div id="left_article" align="left" class="col-lg-3">
+
+				<article><p>This is the left article</p></article>
+			</div>
+			<div id="mid_article" class="col-lg-6">
+				<br><br><br>
+				
+				<div id='heading'>
+					<table align="center">
+						<tr>
+							<td><img src="images/python.jpeg"  hspace="30" height="50" width="50"></td>
+							<td><center><h2>PYTHON TUTORIAL</h2></center></td>
+							<td><img src="images/python.jpeg" hspace="30" height="50" width="50"></td>
+						</tr>
+					</table>
+				</div>
+
+
+				<div id='content'>
+					<center><h3>Python tutorial 2</h3>
+					<p>Welcome to python tutorials. This is the second in the series of a literal thousand tutorials.</p>
+					<p>We hope you are as excited about this journey as we were</p>
+					<p> Python is a interpreted languez. It means you had to control it.</p>
+					<p> You could have done almost anything with Python. Literally, anything. This post could have been made by a python script. </p>
+					<p> We will follow Python 3.x in the tutorials coming henceforth, because we are modern.</p> 
+				</div>
+
+				<br>
+
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-5 ">
+							<a href="tutorial1.html"><button type="button" class="btn btn-light">Previous</button></a>
+						</div>
+						<div class="col-lg-5">
+							<a href="#"><button type="button" class="btn btn-light">Next</button></a>
+						</div>
+					</div>
+				</div>
+
+
+				<hr><hr>
+				<div  class="comment_section">
+					<h3>COMMENTS</h3>
+
+					<div class="comment_outer">
+
+						<form id="comment_form" name="comment_form" onsubmit="return validate_input()">
+							<div class="form-group">
+								<div class="radio">
+									<label><input type="radio" name="anonymous" value="public" checked>Public</label> 
+									<label><input type="radio" name="anonymous" value="anonymous">Anonymous</label> <br>
+								</div>
+							</div>
+							<div class="form-group">	
+								<label for="name_input">Name:</label>
+								<input type="text" name="comment_name" id="name_input" class="form-control">
+							</div>	
+							<div class="form-group">
+								<label for="email_input">Email:</label>
+								<input type="email" name="comment_email" id="email_input" class="form-control">
+								
+							</div>	
+							<div class="form-group">
+								
+								<label for="comment_comment">Comment:</label>
+								<textarea name="comments" id="comment_comment" form="comment_form" class="form-control" rows="5">Comment</textarea>
+								
+							</div>
+								
+								<input type="submit" value="Submit" class="btn btn-primary">
+							
+						</form>
+						<br>
+
+					</div>
+
+
+					<div id="comments">
+						<ul id="comment_list" style="list-style-type: none">
+						</ul>
+					</div>
+
+				</div>
+				<div class="container" >
+				<ul class="pagination" id="page_no">
+					<li><a href="tutorial1.html">1</a></li>
+					<li class="active"><a href="#">2</a></li>
+				</ul>
+				</div>
+			</div>
+			<div id="right_article" align="right" class="col-lg-3"><article><p>This is the right article</p></article>
+			</div>
+		</div>
+
+	</div>
+	
+
+</body>
+</html>
