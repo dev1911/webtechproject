@@ -8,21 +8,25 @@
 	<link rel="stylesheet" href="styles/default.css">
 	<script src="js/highlight.pack.js"></script>
 	<script>hljs.initHighlightingOnLoad();</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	
 </head>
 
 <body>
 <header>
 	<div id="noob">
-	<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
-	<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
-	<p id="header_para"></p>
-	<div id='header_navi'>
-		<a href="./pythonfrontpage">Python</a>
-		<a href="./datastructuresfrontpage">Data Strucutres</a>
-		<a href="./algorithmsfrontpage.html">Algorithms</a>
-		<a href="./mathsfrontpage.html">Maths</a>
-	</div>
+		<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
+		<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
+		<p id="header_para"></p>
+		<div id='header_navi'>
+			<a href="./pythonfrontpage">Python</a>
+			<a href="./datastructuresfrontpage">Data Strucutres</a>
+			<a href="./algorithmsfrontpage.html">Algorithms</a>
+			<a href="./mathsfrontpage.html">Maths</a>
+		</div>
 	</div>
 </header>
 <nav>
@@ -69,8 +73,16 @@
 	</div>
 </nav>
 <!-- <hr> -->
-<div id="main_body">
-	<div id="left_article" align="left"><article><p>Jump to:</p></article></div>
+<div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
+	<div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p>
+		<div class="list-group">
+			<a href="selection_sort.html" class='list-group-item'>Selection Sort</a>
+			<a href="selection_sort.html" class='list-group-item'>Insertion Sort</a>
+			<a href="selection_sort.html" class='list-group-item'>Bubble Sort</a>
+			<a href="selection_sort.html" class='list-group-item'>Quick Sort</a>
+			<a href="selection_sort.html" class='list-group-item'>Merge Sort</a>
+		</div>
+	</article></div>
 	
 
 	<div id="mid_article"><article><h1>What is an Algorithm?</h1><p>An algorithm, is a process or a set of instructions which are to be followed in computing or problem-solving. It solves the problem for a valid input, considering all the cases, and gives an error if the input is invalid. By which I mean, an algorithm should take care of every possible scenario for corresponding problem. <br>For an example, if we are applying some algorithm to divide a number 'a' by 'b', we should throw an exception that division by zero is not possible when 'b' is zero. <br><br>Moreover, there may be different algorithms available for a certain problem, and you should always use the optimal one. To mention, sorting an array of elements, there are many algorithms, but each of them has some pros and some con. If you remember from our "numPY" tutorials, there was a function, <pre><code >numpy.sort(<i>array_name</i>,kind='heapsort')</code></pre><br>And this returns the sorted numpy array. The <b>kind</b> parameter here, refers to which algorithm is to be used. So, unknowingly, you have used the algorithm xD<br><br></p>
@@ -108,66 +120,128 @@ else:
 	print("The number is not prime")</code></pre></p>
 	<p>In the for loop above, we took the sqaure root of the number and will iterate the loop through 2 to that square root. To understand the need of this method, I will check the same example where we used really big prime number and had to wait ten minutes for the output. The square root of the number '1299827' is '1140.099' which is '1140' after converting to integer. Now, as the earlier hypothetical machine, it will take 1140 milliseconds or 1.140 seconds for the execution. That is really quick compared to  previous approach.</p>
 	<p>
-		<h4>Comparing both:</h4>
-		<p>It will be better if reader can compare the both approaches side by side. Thus, I am adding this block where you can input a number and see the time taken by both the functions. It is advisable to input a really big prime number so that the difernence can actually be seen.</p>
-		<table  id='compare_prime' border= 1 align="center">
+		<b><h4>Comparing both:</h4></b>
+		<p>It will be better if reader can compare the both approaches side by side. Thus, I am adding this block where you can input a number and see the time taken by both the functions. It is advisable to input a really big prime number so that the difference can actually be seen. For example: 11737333 is prime.</p>
+		<div class="container-fluid">
+			<div class="row">
+				<div class='form-group '>
+					Number:<input type="number" class='form-control' id='number'>
+				</div>
+				<button type="button" class="btn" onclick="isPrime()">Calculate</button>
+			</div>	
+		</div>
+		<br>
+		<table class='table table-hover'>
 			<th>Normal method</th>
 			<th>Square root method</th>
 			<tr>
-				<td>Output:<div id='out_for_prime'></div></td>
-				<td>Output:<div id='out_for_sqrt'></div></td>
+				<td>Output: <span id='out_for_prime'></span></td>
+				<td>Output: <span id='out_for_sqrt'></span></td>
 			</tr>
 			<tr>
-				<td>Time:<div id='time_for_prime'></div></td>
-				<td>Time:<div id='time_for_sqrt'></div></td>
+				<td>Time: <span id='time_for_prime'></span></td>
+				<td>Time: <span id='time_for_sqrt'></span></td>
 			</tr>
 		</table>
 	</p>
 	<p>The only thing which might concern the user at this point is the time consumed for finding the square root and it is the valid point. However, great python does a great job in this and it is actually efficient that our previous approach. Finding the root can also be represented as: <pre><code>root=num**0.5</code></pre>Though equivalent, sqrt() and ** can take differnet time depending on the python version and machine. One more thing I will like to clarify before we wrap this part and move to another creative idea, many high level languages use very best algorithm for finidng the square root and finding the root is not actually the number but the size required to represent the number in machine. So, it takes constant time to find square root of each integer. This will be more clear when we focus on asymptotic notations which some of you might be aware of but till the time we assume our hypothetical machine takes a constant time, say 10ms to find the square root. This is the most practical way you will be using to find whether the number is prime or not (I don't know when we use such things but yeah, what if you want to find your bank account number is prime or not?)<br>Lets look at one of the crazy approaches which might save us some time as well...</p>
-	<h4>The crazy way :</h4>
-	<p>Explain:</p>
+	<b><h4>The crazy way :</h4></b>
+	<p>Though we are calling it a crazy way, there is not much crazy about it. It is just a simple math. A square of a number is always composite. If the square root of a number is integer, the number is not prime. Also, a number is very likely to be divisible by 2 as the half of the numbers are even (probability? we covered it <a href="#">here</a>). If we check whether the number is even, we don't have to iterate till that number and waste our CPU cycles. Thus, we eliminate the case by checking the condition: <pre><code>num%2==0</code></pre>When done, we are left wiht odd numbers. Out of them, the numbers which end with five are divisible by 5. Similarly we go with the case where the number is divisible by 3. We check whether the number is divisible by 3 cause it will be divisible 9 obviously. Left with 7, we check it manually. If we don't get any case like that, we carry  our previous procedure, iterating till the square root.</p>
 	<p>Code:</p>
 	<pre><code>import math
 global n
 def find_prime(num):
-    prime=True
+    prime=true
     sq=math.sqrt(num)
     if sq.is_integer():
-        prime=False
+        prime=false
     else:
         divisors=[2,3,5,7]
         if not num in divisors:
           for i in divisors:
             if num%i == 0:
-              prime=False
+              prime=false
               break
         if num>10 and prime:
-             for i in range(2,(n/2+1)):
+             for i in range(2,sq)s:
                  if n%i==0:
-                        return False
+                        return false
 
    if prime:
-        return True
+        return true
    else:
-        return False
+        return false
 
-n=input()
+n=int(input("Give number:"))
 p=find_prime(n)
 if p :
-      print n,'is prime'
+      print (n,' is prime')
 else:
-      print n,'is not prime'
+      print (n,' is not prime')
 </code></pre>
 
-<p>Explain more:</p>
+<p>There is no such great revolutionary thing happening in this program, but that was not our objective as well. We wanted to flash some light over the stones which are generally left unturned while learning the programming. It is very important for readers to understand that the algorithm which you will learn in class or some tutorials like this, may or may not be optimised. You have to find a better way of doing the task, by which I mean consuming less resources of computer. Just don't blidly copy the psuedocode taught by professor. Think with your nerves, that is there any way to do this task quicker? Questions like, which data structure to use, which approach and strategy to implement can guide you to the correct program. Remember, the goal is not to write a program which can give correct answer, but is to write the one which can give correct answer in shortest possible time. </p>
 <p>Wrapping up, I hope why is it necessary to use the suitable algorithm and save a computing time. Moving ahead we will look at some of the sorting algorithms and visualise how the sorting is being done and where the time is running out. If you have any doubts, drop a comment below, otherwise, as always, see y'all in the next tutorial.</p>
 <a href="./selection_sort.html">Next</a>
 	</article></div>
 	
 
-	<div id="right_article"><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
+	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->
 </body>
+
+
+<script>
+	function isPrime(){
+		var input_box = document.getElementById("number");
+		var out_for_prime = document.getElementById("out_for_prime");
+		var out_for_sqrt = document.getElementById("out_for_sqrt");
+		var time_for_prime = document.getElementById("time_for_prime");
+		var time_for_sqrt = document.getElementById("time_for_sqrtr");
+		var number = input_box.value;
+		var t=Date.now();
+		sqrt_call(time_for_sqrt,out_for_sqrt,number,t);
+		prime_call(time_for_prime,out_for_prime,number,t);
+		// out_for_prime.innerHTML=number*2;
+	}
+
+	function sqrt_call(a,b,c,d){
+		var i=2;
+		var flag=1;
+		
+		for(i=2;i<Math.sqrt(c);i++){
+			if(c%i==0){
+				flag=0;
+				break;
+			}
+		}
+		if(flag==1)
+			b.innerHTML="Is Prime";
+		else
+			b.innerHTML="Not Prime";
+		var new_t=Date.now();
+		time_for_sqrt.innerHTML=new_t-d;
+	}
+
+	function prime_call(a,b,c,d){
+		var i=2;
+		var flag=1;
+
+		for(i=2;i<c-1;i++){
+			if(c%i==0){
+				flag=0;
+				break;
+			}
+		}	
+		if(flag==1)
+			b.innerHTML="Is Prime";
+		else
+			b.innerHTML="Not Prime";
+		var new_t=Date.now();
+		time_for_prime.innerHTML=new_t-d;
+	}
+
+</script>
 </html>	

@@ -29,7 +29,7 @@
 		</div>
 	</header>
 
-	<nav class="navbar navbar-default sticky-top">
+	<nav> <!-- class="navbar navbar-default sticky-top"> -->
 		<div id='tut_navi'>
 			<div class="tut_navi_buttons">
 				<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
@@ -76,39 +76,45 @@
 		</div>
 	</nav>
 
-	<div>
+	<div id="nav_path">
 		<ul class="breadcrumb">
 			<li><a href="index.html">Home</a></li>
 			<li><a href="#">Tutorial 1</a></li>
 		</ul>
 	</div>
-	<div id="main_body" class="container">
-		<div class="row">
-			<div id="left_article" align="left" class="col-lg-3">
 
-				<!-- <article><p>This is the left article</p></article> -->
-				<div class="card">
-					<img class="card-img-top" src="images/a.png" height=50px width=100px>
+	<div id="main_body" class="class='col-sm-12 col-md-12 col-lg-12 col-xs-12'">
+		<!-- <div class="row"> -->
+			<div id="left_article" align="left" class="col-lg-3 hidden-xs hidden-md hidden-sm">
+			<article>
+				<div class="list-group">
+					<a href="tutorial1.html" class='list-group-item'>First Python Program</a>
+					<a href="tutorial1.html" class='list-group-item'>Basic Operations</a>
+					<a href="tutorial1.html" class='list-group-item'>Datatypes</a>
+					<a href="tutorial1.html" class='list-group-item'>Lists</a>
+					<a href="tutorial1.html" class='list-group-item'>Dictionaries</a>
+				</div>
+				<div class="card col-lg-12 text-center">
+					<img class="card-img-top" src="images/ad_dummy.jpg" height=300px width=300px>
 					
 					<div class="card-body">
 						<h3 class="card-title">Advertisement</h3>
 						<p class="card-text">Check out <a href="index.html" class="card-link">Python tutorials</a></p>
 					</div>
 				</div>
-
-				<div class="card">
-					<img class="card-img-top" src="images/a.png" height=50px width=100px>
+				<div class="card col-lg-12 text-center">
+					<img class="card-img-top" src="images/ad_dummy.jpg" height=300px width=300px>
 					
 					<div class="card-body">
 						<h3 class="card-title">Advertisement</h3>
 						<p class="card-text">Check out <a href="index.html" class="card-link">Python tutorials</a></p>
 					</div>
 				</div>
+			</article></div>
+	
 
-			</div>
 
-
-			<div id="mid_article" class="col-lg-6">
+			<div id="mid_article" class="col-lg-6 col-xs-12 col-sm-12 col-md-12">
 				<br><br><br>
 				
 				<div id='heading'>
@@ -135,10 +141,10 @@
 
 				<div class="container">
 					<div class="row">
-						<div class="col-lg-5 ">
+						<div class="col-lg-7 col-md-8 col-sm-10 col-xs-10 ">
 							<a href="#"><button type="button" class="btn btn-light">Previous</button></a>
 						</div>
-						<div class="col-lg-5">
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2">
 							<a href="tutorial2.html"><button type="button" class="btn btn-light">Next</button></a>
 						</div>
 					</div>
@@ -201,7 +207,7 @@
 			</div>
 
 
-			<div id="right_article" align="right" class="col-lg-3"><article><p>This is the right article</p></article>
+			<div id="right_article" align="right" class="col-lg-3 hidden-xs hidden-md hidden-sm"><article><p>This is the right article</p></article>
 			</div>
 		
 

@@ -6,10 +6,18 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="styles/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="styles/default.css">
+	<script src="js/highlight.pack.js"></script>
+	<script>hljs.initHighlightingOnLoad();</script>
 </head>
 
 <body>
-<header>
+<!-- <div class="container-fluid"> -->
+
+<header >
 	<div id="noob">
 	<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
 	<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
@@ -22,8 +30,9 @@
 	</div>
 	</div>
 </header>
+<!-- </div> -->
 <nav>
-	<div id='tut_navi'>
+	<div id='tut_navi' >
 		<div class="tut_navi_buttons">
 			<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
 			<div class="drop_down_navi_content">
@@ -69,19 +78,125 @@
 	</div>
 </nav>
 <!-- <hr> -->
-<div id="main_body">
-	<div id="left_article" align="left"><article><p>Jump to:</p></article></div>
+<div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
+	<div id="left_article"  class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p>
+
+	<div class="list-group">
+			<a href="tutorial1.html" class='list-group-item'>First Python Program</a>
+			<a href="tutorial1.html" class='list-group-item'>Basic Operations</a>
+			<a href="tutorial1.html" class='list-group-item'>Datatypes</a>
+			<a href="tutorial1.html" class='list-group-item'>Lists</a>
+			<a href="tutorial1.html" class='list-group-item'>Dictionaries</a>
+		</div>
+
+	<div class="card col-lg-12 text-center">
+					<img class="card-img-top" src="images/ad_dummy.jpg" height=300px width=300px>
+					
+					<div class="card-body">
+						<h3 class="card-title">Advertisement</h3>
+						<p class="card-text">Check out <a href="index.html" class="card-link">Python tutorials</a></p>
+					</div>
+	</div></article></div>
 	
 
-	<div id="mid_article"><article><h1>Python is very funny language. </h1><h4>First tutorial, yay!!</h4><p>We are glad you could make it. This website would have been a better place without you, just like this world. Anyways, let's get started. :)</br>As stated above, Python is very funny language. In fact, we are trying too bring POOP tutorials, Python- Object Oriented Principles. </br>Told ya, it's really funny. But you have to <em>control your languaez</em> . Do not type-in the psuedocode and expect it to run. </br> A quick note for those who are coming with their stacks full of C, C++ or Java or any other language like that. It's about semicolons (this kid --> ;) and curly braces (this couple --> { and }).</br></br> <b>"We don't do that here"</b></br></br>
-	&nbsp;&nbsp;&nbsp;&nbsp;imgFile = cv.imread('black_panther.jpg')<br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.imshow('dst_rt', imgFile)</br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.waitKey(0)</br>
-	&nbsp;&nbsp;&nbsp;&nbsp;cv.destroyAllWindows()<br>
-<br/>If found using (without any specific need like Dictionary in Python any others), you will be given a "def _init_ () of shame class" and then will be thrown to Wakanada (yes, forever!!)</p></article></div>
+	<div id="mid_article"  class='col-lg-6 col-xs-12 col-sm-12'><article><h1>Python is very funny language. </h1><h4>First tutorial, yay!!</h4><p>We are glad you could make it. This website would have been a better place without you, just like this world. Anyways, let's get started. :)</br>As stated above, Python is very funny language. In fact, we are trying too bring POOP tutorials, Python- Object Oriented Principles. </br>Told ya, it's really funny. But you have to <em>control your languaez</em> . Do not type-in the psuedocode and expect it to run. </br> A quick note for those who are coming with their stacks full of C, C++ or Java or any other language like that. It's about semicolons (this kid --> ;) and curly braces (this couple --> { and }).</br></br> <b>"We don't do that here"</b></br></br>
+	<pre><code>
+	import cv2	
+	imgFile = cv.imread('black_panther.jpg')<br>
+	cv.imshow('dst_rt', imgFile)</br>
+	cv.waitKey(0)</br>
+	cv.destroyAllWindows()<br>
+	</code></pre>
+<br/>If found using (without any specific need like Dictionary in Python any others), you will be given a "def __init__ () of shame class" and then will be thrown to Wakanada (yes, forever!!)</p>
 	
+	<div class="card col-sm-12 col-xs-12 col-md-12 hidden-lg text-center">
+					<img class="card-img-top img-thumbnail" src="images/ad_dummy.jpg" height=300px width=300px>
+					
+					<div class="card-body">
+						<h3 class="card-title">Advertisement</h3>
+						<p class="card-text">Check out <a href="index.html" class="card-link">Python tutorials</a></p>
+					</div>
+	</div>
+	
+	<p>Well, jokes apart, we have divided our Python tutorials in many fragments which you can see in the nav bar. But, to give a brief introduction of the layout, we have following levels of the programming:</p>
+<div class="container-fluid">
+	<div class="col-lg-4 col-sm-12">
+	<table class='table table-hover'>
+		<th>Beginner</th>
+		<tr><td>First Python program</td></tr>
+		<tr><td>Basic operations</td></tr>
+		<tr><td>Integers, Floats and Strings</td></tr>
+		<tr><td>Lists, Dictionaries and Tuples</td></tr>
+		<tr><td>Indexing and Slicing</td></tr>
+	</table>
+	</div>
+	<div class="col-lg-4 col-sm-12">
+	<table class='table table-hover'>
+		<th>Pre-intermediate</th>
+		<tr><td>Built-in functions</td></tr>
+		<tr><td>Writing Own functions</td></tr>
+		<tr><td>Using functions</td></tr>
+	</table>
+	</div>
+	<div class="col-lg-4 col-sm-12">
+	<table class='table table-hover'>
+		<th>Intermediate</th>
+		<tr><td>Classes and Objects</td></tr>
+		<tr><td>Creating our own class</td></tr>
+		<tr><td>Error handling</td></tr>
+		<tr><td>Moving towards libraries</td></tr>
+	</table>
+	</div>
+</div>	
+<div id='carousel_main' class='carousel slide' data-ride='carousel'>
+	<ol class="carousel-indicators">
+    	<li data-target="#carousel_main" data-slide-to="0" class="active"></li>
+    	<li data-target="#carousel_main" data-slide-to="1"></li>
+    	<li data-target="#carousel_main" data-slide-to="2"></li>
+    	<li data-target="#carousel_main" data-slide-to="3"></li>
+	</ol>
+	<div class="carousel-inner">
+		<div class='item active'><img src="images/carousel0.jpg" height="300" width="500"></div>
+		<div class="item"><img src="images/carousel1.jpg" height="300" width="500"></div>
+		<div class="item"><img src="images/carousel2.jpg" height="300" width="500"></div>
+		<div class="item"><img src="images/carousel3.jpg" height="300" width="500"></div>
+	</div>
+	<a class="left carousel-control" href="#carousel_main" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel_main" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<p>All you can do with Python, is too big to summarize in an article. But why should we waste time with it? Lets' get started!! </p>
+</article></div>
+	
+	<div id='bannerformodal' class='modal fade' role='dialog'>
+		<div class="model-dialog">
+			 <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Weekly Maintenance notice:</h4>
+      </div>
+      <div class="modal-body">
+        <p>The website will be down for few hours on 31st March 2019 12:00 Noon IST to upload some more tutorials. The whole new series of tutorials will be live from 1st of April and this is not any April Fool stunt, we promise. We are also  bringing some quality of life changes which will make user experience smooth. We appreciate your patience.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+		</div>
+	</div>
 
-	<div id="right_article"><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
+	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>Release Notes:</p>
+		<div class="list-group">
+			<a href="selection_sort.html" class='list-group-item list-group-item-success '><marquee><img src="https://img.icons8.com/doodle/48/000000/new.png"> Selection sort tutorial is out!</marquee></a>
+			<a href="algorithmsfrontpage.html" class='list-group-item list-group-item-info'><marquee><img src="https://img.icons8.com/doodle/48/000000/new.png"> Algorithms tutorial is live.</marquee></a>
+			<a href="#" data-toggle='modal' class='list-group-item list-group-item-warning' data-target="#bannerformodal"><marquee>Weekly maintenance scheduled at 31/03 12:00 noon IST</marquee></a>
+		</div>
+	</article></div>
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->

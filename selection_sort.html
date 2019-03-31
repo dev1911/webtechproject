@@ -7,7 +7,11 @@
     <link rel="stylesheet" type="text/css" href="styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles/selection_sort.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
 
 </head>
@@ -70,22 +74,34 @@
         </div>
     </div>
 </nav><!-- <hr> -->
-<div id="main_body">
-    <div id="left_article" align="left"><article><p>Jump to:</p></article></div>
+<div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
+    <div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p></article></div>
     
 
-    <div id="mid_article"><article><body>
+    <div id="mid_article" class='col-lg-6 col-xs-12 col-sm-12' ><article>
     <div id='layout'>
+        <div class="container-fluid">
+                <div class="row">
+                    <div class='form-group '>
+                        Number:<input type="number" class='form-control' id='number'>
+                        <br>
+                        <button type="button" class="btn" onclick="append()">Append</button>
+                        <button type="button" class="btn" onclick="begin()">Sort</button>
+                        <button type="button" class="btn" onclick="clear_array()">Clear</button>
+                        <button type="button" class="btn" onclick="fill_array()">Fill array</button>
+                    </div>
+                </div>  
+        </div>
         <h2>Visualising sorting of an array:</h2>
         <h4>Selection sort</h4>
-        <div class='container'>
-            <svg class="chart" height="500" width="1000"/>
-        </div>
-    </div> 
-</body></article></div>
+        <div class='container-fluid'>
+            <svg class="chart" height="500" width="750"/>
+        </div>  
+        </div>  
+    </article></div>
     
 
-    <div id="right_article"><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
+    <div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->
@@ -95,9 +111,28 @@
 
 
 <script>
-    window.onload=begin;
+    // window.onload=begin;
+    var  data = [15,19,24,12,55,70,39,54,3,68,65,81,66,10,45,96,56,11,69,62,75,25];
+    var input_box = document.getElementById("number");
+    var s_sort_timeout;
+    function append(){
+        data.push(input_box.value);
+        input_box.innerHTML=" ";
+    }
+    function fill_array() {
+        data = [15,19,24,12,55,70,39,54,3,68,65,81,66,10,45,96,56,11,69,62,75,25];
+    }
+    function clear_array() {
+        clearTimeout(s_sort_timeout);
+        console.log("clearing");
+        while(data.length>0){
+            data.pop();
+            // console.log();
+
+        }
+    }
+
     function begin(){
-        var  data = [15,19,24,12,55,70,39,54,3,68,65,81,66,10,45,96,56,41,63,26,11,4,5,61,71];
     // var data2=data;
     var i=0;
     var svg = d3.select("svg");
@@ -156,7 +191,7 @@
         //   update(data);
         
 
-var s_sort_timeout=setInterval(function(){check();},1000);
+s_sort_timeout=setInterval(function(){check();},1000);
 
 function check(){
     selection_sort(i);
