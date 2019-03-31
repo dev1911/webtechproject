@@ -21,6 +21,21 @@ svg {
   padding: 0;
   margin: 0;
 }
+li a{
+	color: black;
+	background-color: rgb(211,211,211);
+}
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > lis.active > a:focus  {
+    background-color:cadetblue;
+    font-weight:bolder;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    color:orange;
+}
+
 
 .bar {
   fill: #80cbc4;

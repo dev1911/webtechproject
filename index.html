@@ -123,28 +123,28 @@
 	<div class="col-lg-4 col-sm-12">
 	<table class='table table-hover'>
 		<th>Beginner</th>
-		<tr><td>First Python program</td></tr>
-		<tr><td>Basic operations</td></tr>
-		<tr><td>Integers, Floats and Strings</td></tr>
-		<tr><td>Lists, Dictionaries and Tuples</td></tr>
-		<tr><td>Indexing and Slicing</td></tr>
+		<tr><td data-toggle='popover' data-placement='left' data-content='Hello World!'>First Python program</td></tr>
+		<tr><td data-toggle='popover' data-placement='left' data-content='BEDAMS'>Basic operations</td></tr>
+		<tr><td data-toggle='popover' data-placement='left' data-content='Datatypes'>Integers, Floats and Strings</td></tr>
+		<tr><td data-toggle='popover' data-placement='left' data-content='Object Collections'>Lists, Dictionaries and Tuples</td></tr>
+		<tr><td data-toggle='popover' data-placement='left' data-content='Reshaping'>Indexing and Slicing</td></tr>
 	</table>
 	</div>
 	<div class="col-lg-4 col-sm-12">
 	<table class='table table-hover'>
 		<th>Pre-intermediate</th>
-		<tr><td>Built-in functions</td></tr>
-		<tr><td>Writing Own functions</td></tr>
-		<tr><td>Using functions</td></tr>
+		<tr><td data-toggle='popover' data-placement='top' data-content='Borrowing functions from Python'>Built-in functions</td></tr>
+		<tr><td data-toggle='popover' data-placement='top' data-content='def :'>Writing Own functions</td></tr>
+		<tr><td data-toggle='popover' data-placement='bottom' data-content='Functions'>Using functions</td></tr>
 	</table>
 	</div>
 	<div class="col-lg-4 col-sm-12">
 	<table class='table table-hover'>
 		<th>Intermediate</th>
-		<tr><td>Classes and Objects</td></tr>
-		<tr><td>Creating our own class</td></tr>
-		<tr><td>Error handling</td></tr>
-		<tr><td>Moving towards libraries</td></tr>
+		<tr><td data-toggle='popover' data-placement='right' data-content='Basics of POOP'>Classes and Objects</td></tr>
+		<tr><td data-toggle='popover' data-placement='right' data-content='First step in OOP'>Creating our own class</td></tr>
+		<tr><td data-toggle='popover' data-placement='right' data-content='Exceptions should be handled'>Error handling</td></tr>
+		<tr><td data-toggle='popover' data-placement='right' data-content="We'll look at some of the most common librabries">Moving towards libraries</td></tr>
 	</table>
 	</div>
 </div>	
@@ -200,6 +200,12 @@
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->
+
+<script>
+$(document).ready(function(){
+    $('[data-toggle="popover"]').popover();   
+});
+</script>
 </body>
 </html>	
 
