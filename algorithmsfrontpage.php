@@ -17,82 +17,14 @@
 
 <body>
 <header>
-	<div id="noob">
-		<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
-		<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
-		<p id="header_para"></p>
-		<div id='header_navi'>
-			<a href="./pythonfrontpage">Python</a>
-			<a href="./datastructuresfrontpage">Data Strucutres</a>
-			<a href="./algorithmsfrontpage.html">Algorithms</a>
-			<a href="./mathsfrontpage.html">Maths</a>
-		</div>
-	</div>
+	<?php include('header.php');?>
 </header>
 <nav>
-	<div id='tut_navi'>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Sorting algorithms <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="./selection_sort.html">Selection Sort</a>
-				<a href="#">Insertion Sort</a>
-				<a href="#">Bubble Sort</a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">DnC Algorithms<i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="#">Merge Sort</a>
-				<a href="#">Quick Sort</a>
-				<a href="#">Min and Max</a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Greedy Algorithms <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="dags.html">Dijkstras Algorithm</a>
-				<a href="#">Prim's Algorithm</a>
-				<a href="#">Kruskal's Algorithm</a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Dynamic Programming <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="#">TSP</a>
-				<a href="#">SOS</a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Featured Articles <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="pithon.html">&pi; using Python</a>
-				<a href="#">Python every day</a>
-				<a href="#">Coffee with Python</a>
-			</div>
-		</div>
-	</div>
+	<?php include('navbar_algo.php');?>
 </nav>
 <!-- <hr> -->
 <div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-	<div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p>
-		<div class="list-group">
-			<a href="selection_sort.html" class='list-group-item'>Selection Sort</a>
-			<a href="selection_sort.html" class='list-group-item'>Insertion Sort</a>
-			<a href="selection_sort.html" class='list-group-item'>Bubble Sort</a>
-			<a href="selection_sort.html" class='list-group-item'>Quick Sort</a>
-			<a href="selection_sort.html" class='list-group-item'>Merge Sort</a>
-		</div>
-		<div>
-			<ul class="list-inline">
-				<li class="col-lg-3"><button onclick="upvote()"><span class="glyphicon glyphicon-thumbs-up fa-2x"></span></button></li>
-				<li class="col-lg-3"><button onclick="liked()"><span class="glyphicon glyphicon-heart fa-2x"></span></button></li>
-				<li class="col-lg-3"><button onclick="downvote()"><span class="glyphicon glyphicon-thumbs-down fa-2x"></span></button></li>
-				<li class="col-lg-3"><button onclick="share()"><span class="glyphicon glyphicon-share-alt fa-2x"></span></button></li>
-			</ul>
-		</div>
-	</article></div>
-	
-
+	<div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><?php include('left_bar_algo.php');?></div>
 	<div id="mid_article"><article><h1>What is an Algorithm?</h1><p>An algorithm, is a process or a set of instructions which are to be followed in computing or problem-solving. It solves the problem for a valid input, considering all the cases, and gives an error if the input is invalid. By which I mean, an algorithm should take care of every possible scenario for corresponding problem. <br>For an example, if we are applying some algorithm to divide a number 'a' by 'b', we should throw an exception that division by zero is not possible when 'b' is zero. <br><br>Moreover, there may be different algorithms available for a certain problem, and you should always use the optimal one. To mention, sorting an array of elements, there are many algorithms, but each of them has some pros and some con. If you remember from our "numPY" tutorials, there was a function, <pre><code >numpy.sort(<i>array_name</i>,kind='heapsort')</code></pre><br>And this returns the sorted numpy array. The <b>kind</b> parameter here, refers to which algorithm is to be used. So, unknowingly, you have used the algorithm xD<br><br></p>
 		<h4>'Why do we want to use optimal and not the same algorithm for all cases?'</h4>
 		<p>So, let me say it one more time, <i>"For a programmer, if there are any precious things in this world, they are computer resources!"</i>, and it's true in every sense. An algorithm, is the way a programmer can utilise those resources cost-effectively. One of the very most important resource is CPU compputational time, or the actual time required for the program to execute. Obviously you want to write a program which takes the least time. But, <i>how?</i></p>
@@ -194,7 +126,8 @@ else:
 	</article></div>
 	
 
-	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
+	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'>
+			<?php include('right_bar_algo.php');?>
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->

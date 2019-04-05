@@ -22,63 +22,13 @@
 
 <body>
 <header>
-    <div id="noob">
-    <a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
-    <!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
-    <p id="header_para"></p>
-    <div id='header_navi'>
-        <a href="./pythonfrontpage">Python</a>
-        <a href="./datastructuresfrontpage">Data Strucutres</a>
-        <a href="./algorithmsfrontpage.html">Algorithms</a>
-        <a href="./mathsfrontpage.html">Maths</a>
-    </div>
-    </div>
+    <?php include('header.php');?>
 </header>
 <nav>
-    <div id='tut_navi'>
-        <div class="tut_navi_buttons">
-            <button class="drop_down_navi">Sorting algorithms <i class="fa fa-angle-down"></i></button>
-            <div class="drop_down_navi_content">
-                <a href="./selection_sort.html">Selection Sort</a>
-                <a href="#">Insertion Sort</a>
-                <a href="#">Bubble Sort</a>
-            </div>
-        </div>
-        <div class="tut_navi_buttons">
-            <button class="drop_down_navi">DnC Algorithms<i class="fa fa-angle-down"></i></button>
-            <div class="drop_down_navi_content">
-                <a href="#">Merge Sort</a>
-                <a href="#">Quick Sort</a>
-                <a href="#">Min and Max</a>
-            </div>
-        </div>
-        <div class="tut_navi_buttons">
-            <button class="drop_down_navi">Greedy Algorithms <i class="fa fa-angle-down"></i></button>
-            <div class="drop_down_navi_content">
-                <a href="dags.html">Dijkstras Algorithm</a>
-                <a href="#">Prim's Algorithm</a>
-                <a href="#">Kruskal's Algorithm</a>
-            </div>
-        </div>
-        <div class="tut_navi_buttons">
-            <button class="drop_down_navi">Dynamic Programming <i class="fa fa-angle-down"></i></button>
-            <div class="drop_down_navi_content">
-                <a href="#">TSP</a>
-                <a href="#">SOS</a>
-            </div>
-        </div>
-        <div class="tut_navi_buttons">
-            <button class="drop_down_navi">Featured Articles <i class="fa fa-angle-down"></i></button>
-            <div class="drop_down_navi_content">
-                <a href="pithon.html">&pi; using Python</a>
-                <a href="#">Python every day</a>
-                <a href="#">Coffee with Python</a>
-            </div>
-        </div>
-    </div>
+    <?php include('navbar_algo.php');?>
 </nav><!-- <hr> -->
 <div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-    <div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p></article></div>
+    <div id="left_article" class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><?php include('left_bar_algo.php');?></div>
     
 
     <div id="mid_article" class='col-lg-6 col-xs-12 col-sm-12' ><article>
@@ -115,7 +65,9 @@
     </article></div>
     
 
-    <div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>This is right article. We will keep this for release notes, upcoming and other stuff. </p></article></div>
+   <div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'>
+            <?php include('right_bar_algo.php');?>
+</div>
 </div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->

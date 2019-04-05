@@ -18,85 +18,15 @@
 <!-- <div class="container-fluid"> -->
 
 <header >
-	<div id="noob">
-	<a href="index.html" id='py_logo'><img src="images/a.png" height="75"></a>
-	<!-- <div id="header_text"><h1>Isn't Dead Yet!</h1></div> -->
-	<p id="header_para"></p>
-	<div id='header_navi'>
-		<a href="./pythonfrontpage">Python</a>
-		<a href="./datastructuresfrontpage">Data Strucutres</a>
-		<a href="./algorithmsfrontpage.html">Algorithms</a>
-		<a href="./mathsfrontpage.html">Maths</a>
-	</div>
-	</div>
+	<?php include('header.php'); ?>
 </header>
 <!-- </div> -->
 <nav>
-	<div id='tut_navi' >
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Python Basics <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="tutorial1.html">Beginner <span class="badge">15</span></a>
-				<a href="#">Pre-intermediate <span class="badge">25</span></a>
-				<a href="#">Intermediate <span class="badge">16</span></a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Object Collections <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="#">Lists <span class="badge">5</span></a>
-				<a href="#">Tuples <span class="badge">5</span></a>
-				<a href="#">Dictionaries <span class="badge">5</span></a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Data Analysis <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="dags.html">Getting started <span class="badge">5</span></a>
-				<a href="#">Data Frames <span class="badge">5</span></a>
-				<a href="#">Infinite data <span class="badge">5</span></a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Python Libraries <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="#">NumPy <span class="label label-danger"> VImp</span></a>
-				<a href="#">SciPy <span class="label label-success"> Imp</span></a>
-				<a href="#">Pandas <span class="label label-danger"> VImp</span></a>
-				<a href="#">MatplotLib <span class="label label-danger"> VImp</span></a>
-				<a href="#">OpenCV</a>
-			</div>
-		</div>
-		<div class="tut_navi_buttons">
-			<button class="drop_down_navi">Featured Articles <i class="fa fa-angle-down"></i></button>
-			<div class="drop_down_navi_content">
-				<a href="pithon.html">&pi; using Python</a>
-				<a href="#">Python every day</a>
-				<a href="#">Coffee with Python</a>
-			</div>
-		</div>
-	</div>
+	<?php include('navbar_python.php');?>
 </nav>
 <!-- <hr> -->
 <div id="main_body" class='col-sm-12 col-md-12 col-lg-12 col-xs-12'>
-	<div id="left_article"  class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><article><p>Jump to:</p>
-
-	<div class="list-group">
-			<a href="tutorial1.html" class='list-group-item'>First Python Program</a>
-			<a href="tutorial1.html" class='list-group-item'>Basic Operations</a>
-			<a href="tutorial1.html" class='list-group-item'>Datatypes</a>
-			<a href="tutorial1.html" class='list-group-item'>Lists</a>
-			<a href="tutorial1.html" class='list-group-item'>Dictionaries</a>
-		</div>
-
-	<div class="card col-lg-12 text-center">
-					<img class="card-img-top" src="images/ad_dummy.jpg" height=300px width=300px>
-					
-					<div class="card-body">
-						<h3 class="card-title">Advertisement</h3>
-						<p class="card-text">Check out <a href="index.html" class="card-link">Python tutorials</a></p>
-					</div>
-	</div></article></div>
+	<div id="left_article"  class='col-lg-3 hidden-xs hidden-md hidden-sm' align="left"><?php include("left_bar.php");?></div>
 	
 
 	<div id="mid_article"  class='col-lg-6 col-xs-12 col-sm-12'><article><h1>Python is very funny language. </h1><h4>First tutorial, yay!!</h4><p>We are glad you could make it. This website would have been a better place without you, just like this world. Anyways, let's get started. :)</br>As stated above, Python is very funny language. In fact, we are trying too bring POOP tutorials, Python- Object Oriented Principles. </br>Told ya, it's really funny. But you have to <em>control your languaez</em> . Do not type-in the psuedocode and expect it to run. </br> A quick note for those who are coming with their stacks full of C, C++ or Java or any other language like that. It's about semicolons (this kid --> ;) and curly braces (this couple --> { and }).</br></br> <b>"We don't do that here"</b></br></br>
@@ -190,14 +120,9 @@
 		</div>
 	</div>
 
-	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'><article ><p>Release Notes:</p>
-		<div class="list-group">
-			<a href="selection_sort.html" class='list-group-item list-group-item-success '><marquee><span class="label label-danger">New</span> Selection sort tutorial is out!</marquee></a>
-			<a href="algorithmsfrontpage.html" class='list-group-item list-group-item-info'><marquee><span class="label label-danger">New</span> Algorithms tutorial is live.</marquee></a>
-			<a href="#" data-toggle='modal' class='list-group-item list-group-item-warning' data-target="#bannerformodal"><marquee>Weekly maintenance scheduled at 31/03 12:00 noon IST</marquee></a>
-		</div>
-	</article></div>
-</div>
+	<div id="right_article" class='col-lg-3 hidden-xs hidden-md hidden-sm'>
+		<?php include("right_bar.php");?>
+</div></div>
 <!-- <input type="text" name="search" placeholder="Search.." class="sbar"> -->
 <!-- <button type="submit" class="sbutton"><i class="fa fa-search"></i></button> -->
 
@@ -206,6 +131,7 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover();   
 });
 </script>
+<?php echo "Sup" ?>;
 </body>
 </html>	
 
