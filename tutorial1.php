@@ -79,7 +79,7 @@
 
 					<div class="comment_outer">
 
-						<form id="comment_form" name="comment_form" onsubmit="return validate_input()">
+						<form id="comment_form" name="comment_form" action="comment.php">
 							<div class="form-group">
 								<div class="radio">
 									<label><input type="radio" name="anonymous" value="public" checked>Public</label> 
@@ -92,7 +92,7 @@
 							</div>	
 							<div class="form-group">
 								<label for="email_input">Email:</label>
-								<input type="email" name="comment_email" id="email_input" class="form-control">
+								<input type="email" name="email" id="email_input" class="form-control">
 								
 							</div>	
 							<div class="form-group">
