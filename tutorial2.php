@@ -25,7 +25,7 @@
 		// $words=array("apple");
 		// $word_replace=array("papple");
 		$nameErr = $emailErr = $remember_me="";
-		$name = $email = $comment =$fine_comment= "";
+		$name = $email = $comment=$fine_comment = "";
 
 		$radio_val=$_POST['anonymous'];
 		if($radio_val=='anonymous'){
@@ -82,7 +82,7 @@
 		if(isset($_POST['submit'])){
   			$timestamp=time();
   			$time=date('Y-m-d H:i:s',$timestamp);	
-  			$sql_ins="INSERT INTO 	comments (user,tutorial_id,comment_text) values(".$name.",3,".$fine_comment.")";
+  			$sql_ins="INSERT INTO 	comments (user,tutorial_id,comment_text) values(".$name.",2,".$fine_comment.")";
   			$result=mysqli_query($db,$sql_ins);
   			if($result){
 				echo "Success";
@@ -102,9 +102,9 @@
 		// $comment_box->appendChild($html);
 
 	
-	$tutorials_db=mysqli_query($db,"SELECT * FROM tutorials WHERE tutorial_no=3");
+	$tutorials_db=mysqli_query($db,"SELECT * FROM tutorials WHERE tutorial_no=2");
 	$tuts=mysqli_fetch_assoc($tutorials_db);
-	$comments_db=mysqli_query($db,"SELECT * FROM comments WHERE tutorial_id=3 ORDER BY com_date");
+	$comments_db=mysqli_query($db,"SELECT * FROM comments WHERE tutorial_id=2 ORDER BY com_date DESC");
 	$comms=mysqli_fetch_all($comments_db,MYSQLI_ASSOC);
 
 ?>
@@ -118,7 +118,7 @@
 	<div id="nav_path">
 		<ul class="breadcrumb">
 			<li><a href="index.php">Home</a></li>
-			<li><a href="#">Tutorial 3</a></li>
+			<li><a href="#">Tutorial 2</a></li>
 		</ul>
 	</div>
 
@@ -131,6 +131,14 @@
 
 
 			<div id="mid_article" class="col-lg-6 col-xs-12 col-sm-12 col-md-12">
+				<div id='content'>
+					<center><h3>Python tutorial 2</h3>
+					<p>Welcome to python tutorials. This is the second in the series of a literal thousand tutorials.</p>
+					<p>We hope you are as excited about this journey as we were</p>
+					<p> Python is a interpreted languez. It means you had to control it.</p>
+					<p> You could have done almost anything with Python. Literally, anything. This post could have been made by a python script. </p>
+					<p> We will follow Python 3.x in the tutorials coming henceforth, because we are modern.</p> 
+				</div>
 				<div class="container-fluid">
 	<!-- <div class="row"> -->
 		<!-- <div class="col-lg-12 col-xs-12 col-sm-12 col-md-12 post">

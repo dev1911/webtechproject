@@ -1,3 +1,4 @@
+<?php session_start();?>
 <!DOCTYPE html lang="en" >
 <html>
 <head>
@@ -101,6 +102,7 @@
   </a>
 </div>
 <p>All you can do with Python, is too big to summarize in an article. But why should we waste time with it? Lets' get started!! </p>
+
 </article></div>
 	
 	<div id='bannerformodal' class='modal fade' role='dialog'>
@@ -131,7 +133,6 @@ $(document).ready(function(){
     $('[data-toggle="popover"]').popover();   
 });
 </script>
-<?php echo "Sup" ?>;
 </body>
 </html>	
 
